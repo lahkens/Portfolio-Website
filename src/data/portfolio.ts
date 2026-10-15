@@ -72,6 +72,17 @@ export const experience: Entry[] = [
     ],
     tags: ['React', 'Node.js', 'Firebase', 'REST APIs', 'Postman'],
   },
+  {
+  title: 'PerceptronAI',dates: 'May 2023 – Aug 2023',
+  subtitle: 'Researcher and Deep Learning Engineer',
+  summary: 'Researched deep learning approaches for materials property prediction and crystal structure generation using Graph Neural Networks, Transformers, and Generative Adversarial Networks (GANs).',
+  bullets: [
+    'Processed ~30 GB of crystallographic CIF data, extracting structural configurations and engineering features across 20 material properties for model training.',
+    'Developed deep learning models using Graph Neural Networks (GNNs), Transformers, and GANs for materials property prediction and generative modeling.',
+    'Fine-tuned model architectures and hyperparameters, achieving 71.82% accuracy on the evaluated materials property prediction task.'
+  ],
+  tags: ['Python', 'PyTorch', 'Graph Neural Networks', 'Transformers', 'GANs', 'Crystallographic Data'],
+}
 ];
 
 export const projects: Project[] = [
@@ -128,7 +139,7 @@ export const education: Entry[] = [
 
 
 export const skills = [
-  { group: 'AI, LLMs and Agentic Systems', items: ['LLMs', 'Generative AI', 'Agentic AI', 'Multi-agent workflows', 'RAG', 'LangChain', 'LangGraph', 'LlamaIndex', 'AI guardrails'] },
+  { group: 'AI, LLMs and Agentic Systems', items: ['LLMs', 'Generative AI', 'Agentic AI', 'Multi-agent workflows', 'RAG', 'LangChain', 'LangGraph', 'LlamaIndex', 'AI guardrails', 'Graph Neural Networks'] },
   { group: 'Inference Optimization and AI Infrastructure', items: ['Llama.cpp', 'OpenCL', 'OpenVX', 'MatMul/GEMM', 'Quantization', 'Graph optimization', 'KV-cache reuse', 'Memory optimization', 'Profiling', 'Assembly kernels'] },
   { group: 'Programming Languages', items: ['C++', 'Python', 'JavaScript', 'TypeScript'] },
   { group: 'Backend and APIs', items: ['FastAPI', 'Node.js', 'REST APIs', 'WebSocket APIs', 'Kafka', 'Microservices', 'Authentication and RBAC'] },
