@@ -14,8 +14,8 @@ export function TimelineItem({ e, current }: { e: Entry; current?: boolean }) {
       <p className="role">{e.subtitle}</p>
       {e.summary && <p className="summary">{e.summary}</p>}
       <ul className="bullets">{e.bullets.map(b => <li key={b}>{b}</li>)}</ul>
+            {e.tags && <ul className="tags" aria-label="Technologies">{e.tags.map(t => <li key={t}>{t}</li>)}</ul>}
             <MediaGallery items={e.media} />
-      {e.tags && <ul className="tags" aria-label="Technologies">{e.tags.map(t => <li key={t}>{t}</li>)}</ul>}
       {e.links && (
         <p className="proj-links">
           {e.links.map(l => <a key={l.href} className="link" href={l.href} target="_blank" rel="noopener noreferrer">{l.label}</a>)}

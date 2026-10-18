@@ -34,7 +34,7 @@ export const experience: Entry[] = [
       'Implemented a LangChain RAG pipeline for a document-grounded conversational assistant, using chunking, embedding vector search and AI guardrails across 100+ enterprise documents.',
     ],
     media: [{ src: mediaUrl('agentic_hr_approval_animated.gif'), alt: 'Backend for Agentic Approval System', caption: 'High Level overview' }],
-    tags: ['LangGraph', 'LangChain', 'RAG', 'LLMs', 'Vector search', 'Guardrails'],
+    tags: ['Agentic AI Development', 'LangGraph', 'LangChain', 'RAG', 'LLMs', 'Vector search', 'Guardrails'],
   },
   {
     title: 'Blaize', subtitle: 'Software Engineer I', dates: 'May 2025 – Jan 2026',
@@ -47,7 +47,7 @@ export const experience: Entry[] = [
     ],
      media: [{ src: mediaUrl('llamacpp_img.png'), alt: 'llama.cpp flow', caption: 'Llama.cpp one token pass' }],
     
-    tags: ['Llama.cpp', 'MatMul/GEMM', 'Quantization', 'KV-cache', 'Profiling'],
+    tags: ['Llama.cpp', 'LLM Inference','Inference Optimization',  'Quantization', 'KV-cache', 'Profiling'],
   },
   {
     title: 'Blaize', subtitle: 'Engineering Intern', dates: 'Dec 2024 – May 2025',
@@ -60,7 +60,7 @@ export const experience: Entry[] = [
       'Built an AI chatbot backend with LlamaIndex for natural-language querying of SQL data, reducing lookup time by 72% with up to 84% response accuracy.',
     ],
     media: [{ src: mediaUrl('FRAS_wide_16x9.gif'), alt: 'FRAS', caption: 'Overview of the architecture' }],
-    tags: ['ResNet50', 'OpenCL', 'Next.js', 'WebRTC', 'Kafka', 'Milvus', 'LlamaIndex'],
+    tags: ['React.js', 'PostgreSQL', 'FastAPI', 'Kafka','LlamaIndex','Next.js', 'Milvus'],
   },
     {
     title: 'Civiccraft Technologies', subtitle: 'Intern, Full Stack Developer', dates: 'June 2024 – Sep 2024',
@@ -92,7 +92,7 @@ export const projects: Project[] = [
     impact: 'Supports 10+ languages.',
      links: [{ href: ' https://www.shrikashivishwanath.org/', label: 'Live site' }],
     embed: ' https://www.shrikashivishwanath.org/', // optional, remove if you only want links
-    tags: ['Node.js', 'REST API', 'Postman', 'WhatsApp'] },
+    tags: ['Node.js', 'REST API', 'Postman', 'WhatsApp API'] },
       { title: '3i Consulting admin panel', kind: 'Professional work at Civiccraft Technologies (internship)',
     problem: '3i Consulting needed a website built from scratch and needed a panel to manage the platform.',
     approach: 'Built the React components and the admin panel, using Firebase for authentication and database management.',
