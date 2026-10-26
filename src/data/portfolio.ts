@@ -8,7 +8,7 @@ export interface CodingProfile { platform: string; handle: string; href: string;
 
 export const profile = {
   name: 'Snekhal Prasad',
-  intro: 'Software Engineer with ~2 years of experience building AI applications using agentic architectures and RAG, optimizing AI inference across GPUs and edge AI devices, and developing full-stack solutions',
+  intro: 'Software Engineer with ~2 years of industry experience building AI applications using agentic architectures and RAG, optimizing inference and compute workloads across TPUs, edge AI devices and accelerators, and developing full-stack solutions.',
   email: 'snekhalprasadsp@gmail.com',
   linkedin: 'https://www.linkedin.com/in/snekhalprasad/',
   leetcode: 'https://leetcode.com/lahkens',
@@ -27,10 +27,11 @@ export const nav = [
 export const experience: Entry[] = [
   {
     title: 'Oracle', subtitle: 'Applications Developer - 1', dates: 'Jan 2026 – Oct 2026',
-    summary: 'Built an end-to-end agentic AI application that automates enterprise approvals across procurement, access, finance and HR workflows.',
+    summary: 'Designed and delivered a full‑stack agentic AI platform that automated enterprise approval processes across procurement, access, finance, and HR, cutting processing time by 80% ',
     bullets: [
-      'Orchestrated multi-agent workflows with LangGraph StateGraph, shared graph state and conditional routing across retrieval, validation and decisioning, reducing approval processing time by ~80%.',
+      'Orchestrated multi-agent workflows using LangGraph StateGraph, shared graph state, and conditional routing across retrieval, validation, and decisioning, reducing average approval processing time from 12mins to 2.5mins.',
       'Built a policy evaluation framework that reconciles JSON rules with LLM outputs, evaluating 200+ enterprise policies through token-budgeted parallel inference and supporting-document processing.',
+      'Configured an MCP server integrating 4 enterprise document sources to fetch attachments returning parsed content and metadata to downstream evaluation workflows',
       'Implemented a LangChain RAG pipeline for a document-grounded conversational assistant, using chunking, embedding vector search and AI guardrails across 100+ enterprise documents.',
     ],
     media: [{ src: mediaUrl('agentic_hr_approval_animated.gif'), alt: 'Backend for Agentic Approval System', caption: 'High Level overview' }],
@@ -38,12 +39,13 @@ export const experience: Entry[] = [
   },
   {
     title: 'Blaize', subtitle: 'Software Engineer I', dates: 'May 2025 – Jan 2026',
-    summary: 'Integrated Llama.cpp with the Graph Streaming Processor (GPU) to enable accelerated LLM inference on edge devices.',
+    summary: 'Integrated Llama.cpp with the Graph Streaming Processor to enable accelerated LLM inference on edge devices.',
     bullets: [
-      'Implemented GPU execution paths for compute-intensive operations such as MatMul/GEMM, handling tensor layouts and data movement, and offloaded 45% of AI compute workloads for models up to 7B parameters.',
-      'Improved inference time by 26% through graph reuse and quantization optimizations.',
-      'Built a tensor and KV-cache memory reuse layer that reduced redundant memory allocations by 75% through caching and buffer reuse.',
-      'Profiled inference workloads to find bottlenecks in operator-level latency, graph execution overhead and memory utilization.',
+      'Designed the OpenVX based backend architecture, leveraging CUDA and OpenVINO implementations as architectural references for operator dispatch, tensor management, and graph execution.',
+      'Implemented TPU execution paths for compute-intensive operations, including MatMul, handling tensor layouts and data movement offloading 45% of compute workloads to GSP for models up to 7B parameters.',  
+      'Improved inference time (TPT) from 45ms to 33ms(~26%) through graph reuse and enabling mixed-precision quantization support, optimizing execution across FP32, FP16, BF16, and INT8 data types.',
+      'Integrated ONNX operators and built a tensor and KV-cache memory reuse layer, reducing redundant memory allocations by 75% through caching and buffer reuse.',
+      'Profiled inference workloads to identify execution bottlenecks and evaluate operator-level latency, graph execution overhead, and memory utilization.',
     ],
      media: [{ src: mediaUrl('llamacpp_img.png'), alt: 'llama.cpp flow', caption: 'Llama.cpp one token pass' }],
     
@@ -53,11 +55,11 @@ export const experience: Entry[] = [
     title: 'Blaize', subtitle: 'Engineering Intern', dates: 'Dec 2024 – May 2025',
     summary: 'Contributed to a facial-recognition attendance system deployed at Blaize Hyderabad, serving 200+ employees.',
         bullets: [
-      'Profiled ResNet50 inference on target hardware and improved throughput by 75% with image batching and OpenCL and assembly kernel modifications.',
+      'Conducted performance benchmarking of ResNet50 inference on target hardware; optimized execution via image batching and OpenCL and assembly kernel modifications, improving inference throughput by 75%.',
+      'Built an AI chatbot backend with LlamaIndex for natural-language querying of SQL data, reducing lookup time by 72% with up to 84% response accuracy.',
       'Implemented the FRAS frontend in Next.js with authentication, role-based access control, WebSocket live updates, WebRTC real-time streaming and Zustand state management.',
       'Developed RESTful and WebSocket API endpoints for real-time updates and data transactions, and implemented Kafka to streamline microservice communication.',
       'Optimized the detection pipeline with SQLAlchemy, Milvus and MinIO to manage relational data, vector embeddings and image storage, improving efficiency by 96%.',
-      'Built an AI chatbot backend with LlamaIndex for natural-language querying of SQL data, reducing lookup time by 72% with up to 84% response accuracy.',
     ],
     media: [{ src: mediaUrl('FRAS_wide_16x9.gif'), alt: 'FRAS', caption: 'Overview of the architecture' }],
     tags: ['React.js', 'PostgreSQL', 'FastAPI', 'Kafka','LlamaIndex','Next.js', 'Milvus'],
