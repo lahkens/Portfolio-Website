@@ -27,12 +27,12 @@ export const nav = [
 export const experience: Entry[] = [
   {
     title: 'Oracle', subtitle: 'Applications Developer - 1', dates: 'Jan 2026 – Oct 2026',
-    summary: 'Designed and delivered a full‑stack agentic AI platform that automated enterprise approval processes across procurement, access, finance, and HR, cutting processing time by 80% ',
+    summary: 'Designed and delivered a full‑stack agentic AI platform that automated enterprise domain approval processes across procurement, access, finance, and HR, cutting processing time by 80% and handling 700+ weekly requests.',
     bullets: [
       'Orchestrated multi-agent workflows using LangGraph StateGraph, shared graph state, and conditional routing across retrieval, validation, and decisioning, reducing average approval processing time from 12mins to 2.5mins.',
       'Built a policy evaluation framework that reconciles JSON rules with LLM outputs, evaluating 200+ enterprise policies through token-budgeted parallel inference and supporting-document processing.',
-      'Configured an MCP server integrating 4 enterprise document sources to fetch attachments returning parsed content and metadata to downstream evaluation workflows',
-      'Implemented a LangChain RAG pipeline for a document-grounded conversational assistant, using chunking, embedding vector search and AI guardrails across 100+ enterprise documents.',
+      'Configured an MCP server exposing tools to integrate 4 document sources enabling downstream AI evaluation workflows to retrieve attached documents, and validate requests against supporting approval policies.',
+      'Implemented a RAG pipeline for document-grounded conversational AI system using LangChain to retrieve context with across 100+ enterprise documents achieving p95 query response latency of ~3.2 seconds.',
     ],
     media: [{ src: mediaUrl('agentic_hr_approval_animated.gif'), alt: 'Backend for Agentic Approval System', caption: 'High Level overview' }],
     tags: ['Agentic AI Development', 'LangGraph', 'LangChain', 'RAG', 'LLMs', 'Vector search', 'Guardrails'],
@@ -41,11 +41,11 @@ export const experience: Entry[] = [
     title: 'Blaize', subtitle: 'Software Engineer I', dates: 'May 2025 – Jan 2026',
     summary: 'Integrated Llama.cpp with the Graph Streaming Processor to enable accelerated LLM inference on edge devices.',
     bullets: [
-      'Designed the OpenVX based backend architecture, leveraging CUDA and OpenVINO implementations as architectural references for operator dispatch, tensor management, and graph execution.',
-      'Implemented TPU execution paths for compute-intensive operations, including MatMul, handling tensor layouts and data movement offloading 45% of compute workloads to GSP for models up to 7B parameters.',  
-      'Improved inference time (TPT) from 45ms to 33ms(~26%) through graph reuse and enabling mixed-precision quantization support, optimizing execution across FP32, FP16, BF16, and INT8 data types.',
-      'Integrated ONNX operators and built a tensor and KV-cache memory reuse layer, reducing redundant memory allocations by 75% through caching and buffer reuse.',
-      'Profiled inference workloads to identify execution bottlenecks and evaluate operator-level latency, graph execution overhead, and memory utilization.',
+'Designed the OpenVX based backend architecture, leveraging OpenVINO and CUDA implementations as architectural references for operator dispatch, tensor management, and graph execution.',      'Implemented TPU execution paths for compute-intensive operations, including MatMul, handling tensor layouts and data movement offloading 45% of compute workloads to GSP for models up to 7B parameters.',  
+      'Implemented GPU execution paths for compute-intensive GGML operations, including MatMul/GEMM and attention, using ONNX operators and custom openCL kernels; handled weight transposition, tensor layout conversions and data movement, offloading 45% of measured compute workloads on models up to 7B parameters.',
+      'Reduced per-output-token decode latency from 45ms to 33ms (~26.7%) through graph caching and reuse and enabling mixed-precision quantization support across FP32, FP16 and BF16 data types.',
+      'Integrated ONNX operators and implemented tensor pooling mechanism alongside a head-major KV-cache layout, reducing redundant memory allocations by 75% through caching and buffer reuse.',
+      'Profiled inference workloads to identify per-token kernel dispatches, decode latency, graph execution times and host to device DMA transfers',
     ],
      media: [{ src: mediaUrl('llamacpp_img.png'), alt: 'llama.cpp flow', caption: 'Llama.cpp one token pass' }],
     
@@ -53,13 +53,13 @@ export const experience: Entry[] = [
   },
   {
     title: 'Blaize', subtitle: 'Engineering Intern', dates: 'Dec 2024 – May 2025',
-    summary: 'Contributed to a facial-recognition attendance system deployed at Blaize Hyderabad, serving 200+ employees.',
+    summary: 'Contributed to a facial-recognition attendance (FRAS) system at Blaize Hyderabad, handling 14K+ frames per minute serving 200+ employees.',
         bullets: [
+      'Built an AI chatbot backend with LlamaIndex for natural-language querying of SQL database, reducing lookup time by 72% with up to 84% response accuracy.',
       'Conducted performance benchmarking of ResNet50 inference on target hardware; optimized execution via image batching and OpenCL and assembly kernel modifications, improving inference throughput by 75%.',
-      'Built an AI chatbot backend with LlamaIndex for natural-language querying of SQL data, reducing lookup time by 72% with up to 84% response accuracy.',
+      'Designed REST APIs using FastAPI across 4 microservices, implemented event-driven communication using Apache Kafka, enabling async data exchange between distributed services handling 14K+ frames per minute. ',
       'Implemented the FRAS frontend in Next.js with authentication, role-based access control, WebSocket live updates, WebRTC real-time streaming and Zustand state management.',
-      'Developed RESTful and WebSocket API endpoints for real-time updates and data transactions, and implemented Kafka to streamline microservice communication.',
-      'Optimized the detection pipeline with SQLAlchemy, Milvus and MinIO to manage relational data, vector embeddings and image storage, improving efficiency by 96%.',
+      'Optimized the detection pipeline with SQLAlchemy, Milvus and MinIO to manage relational data, vector embeddings and object storage respectively.',
     ],
     media: [{ src: mediaUrl('FRAS_wide_16x9.gif'), alt: 'FRAS', caption: 'Overview of the architecture' }],
     tags: ['React.js', 'PostgreSQL', 'FastAPI', 'Kafka','LlamaIndex','Next.js', 'Milvus'],
