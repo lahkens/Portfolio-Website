@@ -136,7 +136,7 @@ export const caseStudy = {
 };
 
 export const education: Entry[] = [
-  { title: 'National Institute of Technology, Tiruchirappalli', subtitle: 'BTech, Metallurgical and Materials Engineering', dates: 'June 2021 – May 2025', bullets: ['CGPA: 8.02'] },
+  { title: 'National Institute of Technology, Tiruchirappalli', subtitle: 'Bachelor of Technology', dates: 'June 2021 – May 2025', bullets: [] },
 ];
 
 
