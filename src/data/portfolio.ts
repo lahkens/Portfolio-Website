@@ -41,8 +41,8 @@ export const experience: Entry[] = [
     title: 'Blaize', subtitle: 'Software Engineer I', dates: 'May 2025 – Jan 2026',
     summary: 'Integrated Llama.cpp with the Graph Streaming Processor to enable accelerated LLM inference on edge devices.',
     bullets: [
-'Designed the OpenVX based backend architecture, leveraging OpenVINO and CUDA implementations as architectural references for operator dispatch, tensor management, and graph execution.',      'Implemented TPU execution paths for compute-intensive operations, including MatMul, handling tensor layouts and data movement offloading 45% of compute workloads to GSP for models up to 7B parameters.',  
-      'Implemented GPU execution paths for compute-intensive GGML operations, including MatMul/GEMM and attention, using ONNX operators and custom openCL kernels; handled weight transposition, tensor layout conversions and data movement, offloading 45% of measured compute workloads on models up to 7B parameters.',
+'Designed the OpenVX based backend architecture, leveraging OpenVINO and CUDA implementations as architectural references for operator dispatch, tensor management, and graph execution.',  
+      'Implemented GPU execution paths for compute-intensive GGML operations, including MatMul/GEMM and attention, using ONNX operators and custom openCL kernels; handled tensor layout conversions, data movement and graph execution, offloading 45% of measured compute workloads on models up to 7B parameters.',
       'Reduced per-output-token decode latency from 45ms to 33ms (~26.7%) through graph caching and reuse and enabling mixed-precision quantization support across FP32, FP16 and BF16 data types.',
       'Integrated ONNX operators and implemented tensor pooling mechanism alongside a head-major KV-cache layout, reducing redundant memory allocations by 75% through caching and buffer reuse.',
       'Profiled inference workloads to identify per-token kernel dispatches, decode latency, graph execution times and host to device DMA transfers',
